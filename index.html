@@ -10,6 +10,9 @@ body{
   min-height:100vh;
   background:linear-gradient(135deg,#ff758c,#ff7eb3);
   font-family:Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   text-align:center;
   color:#fff;
   padding:20px;
@@ -19,8 +22,8 @@ body{
   background:rgba(0,0,0,0.35);
   padding:30px;
   border-radius:25px;
-  max-width:500px;
-  margin:auto;
+  max-width:420px;
+  width:100%;
   box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
 
@@ -28,9 +31,9 @@ h1{
   margin-bottom:15px;
 }
 
-button, a.main-btn{
+button{
   display:inline-block;
-  margin:10px;
+  margin:10px 0;
   padding:12px 26px;
   border:none;
   border-radius:25px;
@@ -39,7 +42,6 @@ button, a.main-btn{
   background:#fff;
   color:#ff4f7b;
   font-weight:bold;
-  text-decoration:none;
 }
 
 .msg{
@@ -48,11 +50,11 @@ button, a.main-btn{
   background:rgba(0,0,0,0.4);
   padding:15px;
   border-radius:15px;
-  animation:fade 0.8s ease;
+  animation:fade 0.6s ease;
 }
 
 @keyframes fade{
-  from{opacity:0; transform:scale(0.8);}
+  from{opacity:0; transform:scale(0.85);}
   to{opacity:1; transform:scale(1);}
 }
 </style>
@@ -60,35 +62,14 @@ button, a.main-btn{
 
 <body>
 
-<!-- 🔊 MUSIC (hidden, but plays in background) -->
-<audio id="bgMusic" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
-
 <div class="main-box">
-
-<!-- 🎶 START MUSIC (SABSE PEHLE) -->
-<button onclick="playMusic()">🎶 Start Music</button>
 
 <h1>🎂 Happy Birthday My Baby ❤️</h1>
 
-<!-- 📸 IMAGE -->
-<img src="https://i.ibb.co/M0bmFzv/upload.jpg" style="
-width:100%;
-max-width:280px;
-border-radius:20px;
-margin:15px 0;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-">
-
-<!-- 💖 LOVE LETTER PAGE BUTTON -->
-<a href="love.html" class="main-btn">💖 Open Love Letter</a>
-
-<hr style="margin:20px 0; opacity:0.4;">
-
-<h2>🎁 Unlock Your Surprises</h2>
+<p>🎁 Tap the buttons to unlock your surprises 💕</p>
 
 <!-- 🔐 SPOILER BUTTONS -->
+
 <button onclick="showMsg(1)">💖 Why I Love You</button>
 <div id="m1" class="msg">
 Pyar karne ki koi wajah nahi hoti 😚<br>
@@ -98,61 +79,25 @@ tumse nahi ❤️🥺
 
 <button onclick="showMsg(2)">🌸 Your Smile</button>
 <div id="m2" class="msg">
-Tumhari smile ek din ka stress ek second me mita deti hai 😊💞
+Tumhari smile ek pal me mera saara din roshan kar deti hai 😊💞
 </div>
 
 <button onclick="showMsg(3)">💐 Our Memories</button>
 <div id="m3" class="msg">
-Hum dono ka ek saath jitne bhi memories hain 💐<br>
-aisa lagta hai kal hi ki baat ho 🌙<br>
-sab kuch bahut sundar tha tumhare saath ✨<br>
+Hum dono ke saath bitaye har pal ki yaadein 💐<br>
+aaj bhi dil me bilkul zinda hain 🌙✨<br>
 tumhare saath ka har pal bahut hi pyara tha ❤️
 </div>
 
 <button onclick="showMsg(4)">🔐 Final Surprise</button>
 <div id="m4" class="msg">
 Mai tumhare saath<br>
-tumhara agle saal ka birthday manana chahta hoon 💍❤️
+tumhara agla birthday bhi manana chahta hoon 💍❤️
 </div>
 
 </div>
 
-<!-- 🧠 JAVASCRIPT -->
 <script>
-function playMusic(){
-  document.getElementById("bgMusic").play();
-}
-
-function showMsg(n){
-  document.getElementById("m"+n).style.display="block";
-}
-</script>
-
-</body>
-</html>
-
-<button onclick="showMsg(3)">💐 Our Memories</button>
-<div id="m3" class="msg">
-Hum dono ka ek saath jitne bhi memories hain 💐<br>
-aisa lagta hai kal hi ki baat ho 🌙<br>
-sab kuch bahut sundar tha tumhare saath ✨<br>
-tumhare saath ka har pal bahut hi pyara tha ❤️
-</div>
-
-<button onclick="showMsg(4)">🔐 Final Surprise</button>
-<div id="m4" class="msg">
-Mai tumhare saath<br>
-tumhara agle saal ka birthday manana chahta hoon 💍❤️
-</div>
-
-</div>
-
-<!-- 🧠 JAVASCRIPT -->
-<script>
-function playMusic(){
-  document.getElementById("bgMusic").play();
-}
-
 function showMsg(n){
   document.getElementById("m"+n).style.display="block";
 }
